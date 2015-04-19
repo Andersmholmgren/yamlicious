@@ -1,6 +1,6 @@
 # yamlicious
 
-A library for Dart developers. It is awesome.
+A library for writing yaml files
 
 ## Usage
 

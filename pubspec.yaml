@@ -1,7 +1,7 @@
 name: yamlicious
 description: >
   A library for writing yaml files
-version: 0.0.1+1
+version: 0.0.1+2
 author: Anders Holmgren <andersmholmgren@gmail.com>
 homepage: https://github.com/Andersmholmgren/yamlicious
 environment:
