@@ -3,19 +3,6 @@
 
 library yamlicious.test;
 
-import 'package:unittest/unittest.dart';
-import 'package:yamlicious/yamlicious.dart';
 
 main() {
-  group('A group of tests', () {
-    Awesome awesome;
-
-    setUp(() {
-      awesome = new Awesome();
-    });
-
-    test('First Test', () {
-      expect(awesome.isAwesome, isTrue);
-    });
-  });
 }

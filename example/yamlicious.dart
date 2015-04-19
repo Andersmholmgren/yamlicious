@@ -3,9 +3,6 @@
 
 library yamlicious.example;
 
-import 'package:yamlicious/yamlicious.dart';
 
 main() {
-  var awesome = new Awesome();
-  print('awesome: ${awesome.isAwesome}');
 }
