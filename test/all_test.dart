@@ -3,6 +3,4 @@
 
 library yamlicious.test;
 
-
-main() {
-}
+main() {}

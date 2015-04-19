@@ -7,5 +7,4 @@
 /// the core yaml package
 library yamlicious;
 
-
 export 'src/yaml_writer.dart';

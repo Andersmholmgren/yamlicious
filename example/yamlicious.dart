@@ -3,6 +3,4 @@
 
 library yamlicious.example;
 
-
-main() {
-}
+main() {}
