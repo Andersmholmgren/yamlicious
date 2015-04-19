@@ -9,11 +9,11 @@ A simple usage example:
     import 'package:yamlicious/yamlicious.dart';
 
     main() {
-      var awesome = new Awesome();
+      var yamlStr = toYamlString(yamlNode);
     }
 
 ## Features and bugs
 
 Please file feature requests and bugs at the [issue tracker][tracker].
 
-[tracker]: http://example.com/issues/replaceme
+[tracker]: https://github.com/Andersmholmgren/yamlicious/issues
