@@ -38,9 +38,7 @@ _mapToYamlString(Map node, int indent, StringSink ss, bool isTopLevel) {
   keys.forEach((k) {
     final v = node[k];
     _writeIndent(indent, ss);
-    ss
-      ..write(k)
-      ..write(': ');
+    ss..write(k)..write(': ');
     _writeYamlString(v, indent, ss, false);
   });
 }
