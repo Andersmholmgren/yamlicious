@@ -1,0 +1,15 @@
+hello: world
+list:
+- item1
+- item2
+map:
+  x: 1
+  string: een tekst
+  float: 3.0
+  long: >
+     this is my very very very
+     long string
+  special: hello "everyone"
+  quoted: "*"
+  nill: null
+  no: false
