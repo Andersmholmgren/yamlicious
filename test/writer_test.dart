@@ -10,8 +10,8 @@ import 'dart:io';
 
 main() {
 
-  group("", () {
-    test("", () {
+  group("toYamlString", () {
+    test("roundtrip test", () {
       var v = loadYaml(new File("test/example.yaml").readAsStringSync());
       var s = toYamlString(v);
       var v2 = loadYaml(s);

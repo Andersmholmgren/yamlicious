@@ -17,26 +17,24 @@ void writeYamlString(node, StringSink sink) {
   _writeYamlString(node, 0, sink, true);
 }
 
-_writeYamlString(node, int indent, StringSink ss, bool isTopLevel) {
+void _writeYamlString(node, int indent, StringSink ss, bool isTopLevel) {
   if (node is Map) {
     _mapToYamlString(node, indent, ss, isTopLevel);
   } else if (node is Iterable) {
     _listToYamlString(node, indent, ss, isTopLevel);
+  } else if (node is String) {
+    ss..writeln('"${_escapeString(node)}"');
+  } else if (node is double) {
+    ss.writeln("!!float $node");
   } else {
-    if (node is String) {
-      ss..writeln('"${_escapeString(node)}"');
-    } else if (node is double) {
-      ss..writeln("!!float $node");
-    } else
-      ss..writeln(node);
+    ss.writeln(node);
   }
 }
 
-_escapeString(String s) {
-  return s.replaceAll('"',r'\"').replaceAll("\n",r"\n");
-}
+String _escapeString(String s) =>
+    s.replaceAll('"', r'\"').replaceAll("\n", r"\n");
 
-_mapToYamlString(Map node, int indent, StringSink ss, bool isTopLevel) {
+void _mapToYamlString(Map node, int indent, StringSink ss, bool isTopLevel) {
   if (!isTopLevel) {
     ss.writeln();
     indent += 2;
@@ -70,7 +68,7 @@ Iterable<String> _sortKeys(Map m) {
   return concat([simple..sort(), maps..sort(), other..sort()]);
 }
 
-_listToYamlString(Iterable node, int indent, StringSink ss, bool isTopLevel) {
+void _listToYamlString(Iterable node, int indent, StringSink ss, bool isTopLevel) {
   if (!isTopLevel) {
     ss.writeln();
     indent += 2;
