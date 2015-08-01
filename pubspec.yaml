@@ -10,3 +10,4 @@ dependencies:
   quiver: '^0.21.3'
 dev_dependencies:
   unittest: any
+  yaml: any

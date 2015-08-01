@@ -23,8 +23,17 @@ _writeYamlString(node, int indent, StringSink ss, bool isTopLevel) {
   } else if (node is Iterable) {
     _listToYamlString(node, indent, ss, isTopLevel);
   } else {
-    ss..writeln(node);
+    if (node is String) {
+      ss..writeln('"${_escapeString(node)}"');
+    } else if (node is double) {
+      ss..writeln("!!float $node");
+    } else
+      ss..writeln(node);
   }
+}
+
+_escapeString(String s) {
+  return s.replaceAll('"',r'\"').replaceAll("\n",r"\n");
 }
 
 _mapToYamlString(Map node, int indent, StringSink ss, bool isTopLevel) {

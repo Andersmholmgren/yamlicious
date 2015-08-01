@@ -3,4 +3,20 @@
 
 library yamlicious.test;
 
-main() {}
+import 'package:yaml/yaml.dart';
+import 'package:yamlicious/yamlicious.dart';
+import 'package:test/test.dart';
+import 'dart:io';
+
+main() {
+
+  group("", () {
+    test("", () {
+      var v = loadYaml(new File("test/example.yaml").readAsStringSync());
+      var s = toYamlString(v);
+      var v2 = loadYaml(s);
+      expect(v,v2);
+
+    });
+  });
+}
