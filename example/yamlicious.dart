@@ -3,4 +3,12 @@
 
 library yamlicious.example;
 
-main() {}
+import 'dart:io' show File;
+
+import 'package:yaml/yaml.dart' show loadYaml;
+import 'package:yamlicious/yamlicious.dart' show toYamlString;
+
+main() {
+  File file = new File("pubspec.yaml");
+  print(toYamlString(loadYaml(file.readAsStringSync())));
+}

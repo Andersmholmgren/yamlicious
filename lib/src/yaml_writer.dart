@@ -5,14 +5,14 @@ library yaml.writer;
 
 import 'package:quiver/iterables.dart';
 
-/// Serialises [node] into a String and returns it
+/// Serializes [node] into a String and returns it.
 String toYamlString(node) {
   var sb = new StringBuffer();
   writeYamlString(node, sb);
   return sb.toString();
 }
 
-/// Serialises [node] into a String and writes it to the [sink]
+/// Serializes [node] into a String and writes it to the [sink].
 void writeYamlString(node, StringSink sink) {
   _writeYamlString(node, 0, sink, true);
 }
@@ -68,7 +68,8 @@ Iterable<String> _sortKeys(Map m) {
   return concat([simple..sort(), maps..sort(), other..sort()]);
 }
 
-void _listToYamlString(Iterable node, int indent, StringSink ss, bool isTopLevel) {
+void _listToYamlString(
+    Iterable node, int indent, StringSink ss, bool isTopLevel) {
   if (!isTopLevel) {
     ss.writeln();
     indent += 2;
@@ -81,8 +82,4 @@ void _listToYamlString(Iterable node, int indent, StringSink ss, bool isTopLevel
   });
 }
 
-void _writeIndent(int indent, StringSink ss) {
-  for (int i = 0; i < indent; i++) {
-    ss.write(' ');
-  }
-}
+void _writeIndent(int indent, StringSink ss) => ss.write(' ' * indent);
