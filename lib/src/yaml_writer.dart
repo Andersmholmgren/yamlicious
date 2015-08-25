@@ -68,7 +68,8 @@ Iterable<String> _sortKeys(Map m) {
   return concat([simple..sort(), maps..sort(), other..sort()]);
 }
 
-void _listToYamlString(Iterable node, int indent, StringSink ss, bool isTopLevel) {
+void _listToYamlString(
+    Iterable node, int indent, StringSink ss, bool isTopLevel) {
   if (!isTopLevel) {
     ss.writeln();
     indent += 2;

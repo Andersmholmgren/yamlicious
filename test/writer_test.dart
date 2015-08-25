@@ -3,20 +3,19 @@
 
 library yamlicious.test;
 
-import 'package:yaml/yaml.dart';
-import 'package:yamlicious/yamlicious.dart';
-import 'package:test/test.dart';
 import 'dart:io';
 
-main() {
+import 'package:test/test.dart';
+import 'package:yaml/yaml.dart';
+import 'package:yamlicious/yamlicious.dart';
 
+main() {
   group("toYamlString", () {
     test("roundtrip test", () {
       var v = loadYaml(new File("test/example.yaml").readAsStringSync());
       var s = toYamlString(v);
       var v2 = loadYaml(s);
-      expect(v,v2);
-
+      expect(v, v2);
     });
   });
 }
