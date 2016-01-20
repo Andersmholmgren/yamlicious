@@ -1,6 +1,5 @@
 author: Anders Holmgren <andersmholmgren@gmail.com>
 description: A library for writing yaml files
-
 homepage: https://github.com/Andersmholmgren/yamlicious
 name: yamlicious
 version: 0.0.3
