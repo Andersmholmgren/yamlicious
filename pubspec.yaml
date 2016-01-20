@@ -8,7 +8,7 @@ dependencies:
   quiver: '^0.21.3'
 dependency_overrides: 
 dev_dependencies: 
-  test: 'any'
-  yaml: 'any'
+  test: '^0.12.7'
+  yaml: '^2.1.8'
 environment: 
   sdk: '>=1.8.0 <2.0.0'
