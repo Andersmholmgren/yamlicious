@@ -1,13 +1,12 @@
-author: Anders Holmgren <andersmholmgren@gmail.com>
-description: A library for writing yaml files
-homepage: https://github.com/Andersmholmgren/yamlicious
-name: yamlicious
-version: 0.0.4
+author: "Anders Holmgren <andersmholmgren@gmail.com>"
+description: "A library for writing yaml files"
+homepage: "https://github.com/Andersmholmgren/yamlicious"
+name: "yamlicious"
+version: "0.0.4"
 dependencies: 
-  quiver: '^0.21.3'
-dependency_overrides: 
+  quiver: "^0.21.3"
 dev_dependencies: 
-  test: '^0.12.7'
-  yaml: '^2.1.8'
+  test: "^0.12.7"
+  yaml: "^2.1.8"
 environment: 
-  sdk: '>=1.8.0 <2.0.0'
+  sdk: ">=1.8.0 <2.0.0"
