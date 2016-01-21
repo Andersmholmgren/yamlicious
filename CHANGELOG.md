@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.4
+
+- tidy dependencies
+
 ## 0.0.2
 
 - fix handling of doubles and quoting strings (thanks @rbellens)
