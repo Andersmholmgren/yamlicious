@@ -3,7 +3,7 @@
 
 library yaml.writer;
 
-import 'package:quiver/iterables.dart';
+import 'package:quiver_iterables/iterables.dart';
 
 /// Serializes [node] into a String and returns it.
 String toYamlString(node) {
