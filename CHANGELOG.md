@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.0.5
+
+- strong mode
+- quiver -> quiver_iterables
+
 ## 0.0.4
 
 - tidy dependencies
