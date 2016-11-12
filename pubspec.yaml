@@ -2,7 +2,7 @@ author: "Anders Holmgren <andersmholmgren@gmail.com>"
 description: "A library for writing yaml files"
 homepage: "https://github.com/Andersmholmgren/yamlicious"
 name: "yamlicious"
-version: "0.0.4"
+version: "0.0.5"
 dependencies: 
   quiver_iterables: "^1.0.0"
 dev_dependencies: 
