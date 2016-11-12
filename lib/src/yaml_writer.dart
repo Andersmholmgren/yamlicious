@@ -3,7 +3,7 @@
 
 library yaml.writer;
 
-import 'package:quiver/iterables.dart';
+import 'package:quiver_iterables/iterables.dart';
 
 /// Serializes [node] into a String and returns it.
 String toYamlString(node) {
@@ -65,7 +65,8 @@ Iterable<String> _sortKeys(Map m) {
     }
   });
 
-  return concat([simple..sort(), maps..sort(), other..sort()]);
+  return concat([simple..sort(), maps..sort(), other..sort()])
+      as Iterable<String>;
 }
 
 void _listToYamlString(
