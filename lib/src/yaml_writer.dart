@@ -40,9 +40,9 @@ void _mapToYamlString(Map node, int indent, StringSink ss, bool isTopLevel) {
     indent += 2;
   }
 
-  final keys = _sortKeys(node);
+  //final keys = _sortKeys(node);
 
-  keys.forEach((k) {
+  node.keys.forEach((k) {
     final v = node[k];
     _writeIndent(indent, ss);
     ss..write(k)..write(': ');
@@ -50,6 +50,7 @@ void _mapToYamlString(Map node, int indent, StringSink ss, bool isTopLevel) {
   });
 }
 
+/*
 Iterable<String> _sortKeys(Map m) {
   final simple = [];
   final maps = [];
@@ -68,6 +69,7 @@ Iterable<String> _sortKeys(Map m) {
   return concat([simple..sort(), maps..sort(), other..sort()])
       as Iterable<String>;
 }
+*/
 
 void _listToYamlString(
     Iterable node, int indent, StringSink ss, bool isTopLevel) {
