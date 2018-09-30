@@ -4,9 +4,9 @@ homepage: "https://github.com/Andersmholmgren/yamlicious"
 name: "yamlicious"
 version: "0.0.5"
 dependencies: 
-  quiver_iterables: "^1.0.0"
+  quiver: ">=1.0.0"
 dev_dependencies: 
-  test: "^0.12.7"
-  yaml: "^2.1.8"
+  test: ">=0.12.7"
+  yaml: ">=2.1.8"
 environment: 
-  sdk: ">=1.8.0 <2.0.0"
+  sdk: ">=2.0.0 <3.0.0"
