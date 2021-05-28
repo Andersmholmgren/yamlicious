@@ -7,3 +7,4 @@ packages
 pubspec.lock
 *delme*
 .packages
+.dart_tool
